@@ -1,0 +1,197 @@
+html, body {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Open Sans', sans-serif;
+}
+
+h1 {
+  text-align: center;
+  background-color: #61a1f3;
+  color: white;
+  margin-top: 0;
+  padding: 60px;
+  font-weight: 300;
+  font-size: 42px;
+}
+
+h2 {
+  text-align: center;
+  font-weight: 300;
+}
+
+.content-container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.message {
+  border-radius: 5px;
+  text-align: center;
+  margin: 10px auto;
+  height: 40px;
+  line-height: 40px;
+  display: none;
+}
+
+.success-message {
+  background-color: #dff0d8;
+  border-color: #d0e9c6;
+  color: #3c763d;
+}
+
+.error-message, .validation-error-message {
+  background-color: #f2dede;
+  border-color: #ebcccc;
+  color: #a94442;
+}
+
+.message-padding {
+  height: 50px;
+}
+
+.options-container, .upload-container {
+  margin-bottom: 20px;
+  position: relative;
+  min-height: 1px;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.options-container {
+  text-align: center;
+}
+
+@media(min-width: 768px) {
+  .options-container, .upload-container {
+    float: left;
+    width: calc(50% - 30px);
+  }
+}
+
+.bucket-type-container {
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.bucket-type-selector {
+  cursor: pointer;
+}
+
+.bucket-options {
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.options-group {
+  text-align: left;
+  padding: 5px;
+}
+
+.options-group input {
+  width: 100%;
+  padding: 5px;
+}
+
+.options-text-helper {
+  font-size: .8em;
+}
+
+#file-upload {
+  position: absolute;
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+}
+
+.box.has-drag-and-drop {
+  text-align: center;
+  background-color: #eeeeee;
+  outline: 2px dashed black;
+  outline-offset: -10px;
+  height: 100px;
+  width: 100%;
+  display: inline-flex;
+}
+
+.box {
+  cursor: pointer;
+}
+
+.box:hover, .box.dragover {
+  background-color: #f3f8fe;
+}
+
+.box-content {
+  margin: auto;
+  font-size: 16px;
+}
+
+.box-instructions-text {
+  display: inline;
+  line-height: 100px;
+  margin-left: 40px;
+}
+
+#drop-icon {
+  height: 40px;
+  margin-right: 5px;
+  position: absolute;
+  top: 30px;
+  left: 50px;
+}
+
+.box-uploading {
+  display: none;
+}
+
+@media(min-width: 460px) {
+  .box-content {
+    font-size: 20px;
+  }
+}
+
+@media(min-width: 768px) {
+  .box.has-drag-and-drop {
+    height: 300px;
+  }
+  .box-content {
+    font-size: 24px;
+  }
+  #drop-icon {
+    height: 100px;
+    margin-bottom: 30px;
+    margin-right: 0;
+    position: static;
+  }
+  .box-instructions-text {
+    display: block;
+    margin-left: 0;
+    line-height: inherit;
+  }
+}
+
+.clear {
+  clear: both;
+  line-height: 0;
+}
+
+.footer {
+  box-sizing: border-box;
+  text-align: center;
+  background-color: black;
+  color: white;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  padding: 20px;
+  border: none;
+}
+
+.footer-padding {
+  height: 100px;
+}
+
+.source-link {
+  color: white;
+}

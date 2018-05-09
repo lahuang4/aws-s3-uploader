@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+  <link href="styles.css" rel="stylesheet" />
+
+  <script
+    src="https://code.jquery.com/jquery-3.2.1.min.js"
+    integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+    crossorigin="anonymous"></script>
+  <script src="https://sdk.amazonaws.com/js/aws-sdk-2.164.0.min.js"></script>
+  <script src="upload.js"></script>
+</head>
+<body>
+  <h1>Upload a file</h1>
+  <div class="content-container">
+    <div class="message success-message">
+      Success! Your file was uploaded.
+    </div>
+    <div class="message error-message">
+      Sorry, something went wrong! Please try again.
+    </div>
+    <div class="message validation-error-message">
+      Please fill out all form fields.
+    </div>
+    <div class="message-padding"></div>
+    <div class="row">
+      <div class="col-md-6 options-container">
+        <h2 class="options-instructions">
+          Select your bucket type.
+        </h2>
+        <span class="bucket-type-container">
+          <input type="radio" class="bucket-type-selector" name="bucket-type" id="public" value="public" checked="checked" onchange="selectBucket()" /><label class="bucket-type-selector" for="public">Public</label>
+        </span>
+        <span class="bucket-type-container">
+          <input type="radio" class="bucket-type-selector" name="bucket-type" id="private" value="private" onchange="selectBucket()" /><label class="bucket-type-selector" for="private">Private (Presigned URL)</label>
+        </span>
+        <div class="bucket-options options-public">
+          <div class="options-group">
+            <div class="options-text">Bucket Name</div>
+            <input type="text" id="bucket-name-public">
+          </div>
+          <div class="options-group">
+            <div class="options-text">Bucket Region <span class="options-text-helper">ex. us-east-2</span></div>
+            <input type="text" id="bucket-region-public">
+          </div>
+        </div>
+        <div class="bucket-options options-private">
+          <div class="options-group">
+            <div class="options-text">Bucket Name</div>
+            <input type="text" id="bucket-name-private">
+          </div>
+          <div class="options-group">
+            <div class="options-text">Bucket Region <span class="options-text-helper">ex. us-east-2</span></div>
+            <input type="text" id="bucket-region-private">
+          </div>
+          <div class="options-group">
+            <div class="options-text">Access Key ID</div>
+            <input type="text" id="bucket-access-key-id">
+          </div>
+          <div class="options-group">
+            <div class="options-text">Secret Access Key</div>
+            <input type="text" id="bucket-secret-access-key">
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 upload-container">
+        <input type="file" id="file-upload" onchange="uploadFile()" />
+        <div class="box has-drag-and-drop">
+          <div class="box-content box-instructions">
+            <img src="drop_file.svg" id="drop-icon" />
+            <div class="box-instructions-text"><strong>Drag and drop</strong> a file here.</div>
+          </div>
+          <div class="box-content box-uploading"><strong>Uploading&hellip;</strong></div>
+        </div>
+      </div>
+    </div>
+    <div class="clear"></div>
+  </div>
+  <div class="footer-padding"></div>
+  <div class="footer">
+    <a class="source-link" href="https://github.com/lahuang4/aws-file-uploader">source</a>
+  </div>
+</body>
+</html>
