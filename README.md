@@ -12,6 +12,7 @@ Before attempting to upload images to a public S3 bucket:
 * Make your bucket public:
   * Click on the bucket, select Permissions > Access Control List.
   * Under Public access, click Everyone. Check the Write objects permission and click Save.
+
 * Set up your bucket's CORS configuration:
   * Click on the bucket, select Permissions > CORS configuration.
   * Enter the following as your CORS configuration:
@@ -34,6 +35,7 @@ Before attempting to upload images to a private S3 bucket:
 
 * Set up an IAM user that has write permissions to your bucket. Record the user's access key ID and secret access key.
   * The uploader will generate a presigned URL for uploading images, using your credentials.
+
 * Set up your bucket's CORS configuration:
   * Click on the bucket, select Permissions > CORS configuration.
   * Enter the following as your CORS configuration:
